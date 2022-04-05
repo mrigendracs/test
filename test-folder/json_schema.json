@@ -1,0 +1,53 @@
+{
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$",
+      "errorMessage": {
+        "pattern": "Invalid user_email pattern",
+        "type": "user_email is not of type string"
+      }
+    },
+    "user_name": {
+      "type": "string",
+      "errorMessage": {
+        "type": "user_name is not of type string"
+      }
+    },
+    "workflow": {
+      "type": "string",
+      "errorMessage": {
+        "type": "workflow is not of type string"
+      }
+    },
+    "workflow_version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$",
+      "errorMessage": {
+        "pattern": "Invalid workflow_version pattern",
+        "type": "workflow_version is not of type string"
+      }
+    },
+    "instance": {
+      "type": "string",
+      "errorMessage": {
+        "type": "instance is not of type string"
+      }
+    },
+    "job_inputs": {
+      "type": "object",
+      "errorMessage": {
+        "type": "job_inputs is not of type o"
+      }
+    }
+  },
+  "required": [
+    "user_email",
+    "user_name",
+    "workflow",
+    "instance",
+    "job_inputs"
+  ],
+  "additionalProperties": false
+}
